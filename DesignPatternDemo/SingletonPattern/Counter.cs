@@ -18,11 +18,14 @@ namespace DesignPatternDemo.SingletonPattern
             }
         }
 
+        //Private constructor ensures the class cannot be instantiated elsewhere
         private Counter()
         {
             count = 0;
         }
 
+        //This method will instantiate a new Counter the first time it is called in the program
+        //Any subsequent calls will return the previously instantiated version, NOT a new one
         public static Counter GetInstance()
         {
             if (instance == null)

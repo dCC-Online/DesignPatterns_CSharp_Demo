@@ -156,9 +156,12 @@ namespace DesignPatternDemo
             Country us = new Country("USA");
             Country canada = new Country("Canada");
 
+            //Incrementing USA's counter
             us.counter.Increment();
             us.counter.Increment();
 
+            //Printing Canada's counter
+            //Since we are using Singleton, the two objects share the same counter
             Console.WriteLine(canada.counter.Count);
         }
     }
